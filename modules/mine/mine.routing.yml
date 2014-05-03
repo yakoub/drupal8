@@ -2,7 +2,7 @@ mine.main:
   path: 'mine/main'
   defaults:
     _title: 'Welcome to mine'
-    _content: '\Drupal\mine\Controller\MyController::main'
+    _content: '\Drupal\mine\main'
   requirements:
     _permission: 'access content'
 mine.data:
