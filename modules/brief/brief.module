@@ -1,0 +1,24 @@
+<?php
+function brief_permission() {
+  $permissions = array();
+  $permission['brief create'] = array(
+    'title' => t('Create brief'),
+  );
+  $permission['brief view'] = array(
+    'title' => t('View brief'),
+  );
+  $permission['brief edit'] = array(
+    'title' => t('Edit brief'),
+  );
+  return $permission;
+}
+
+function brief_theme() {
+  $themes = array();
+  $themes['brief_list'] = array(
+    'template' => 'brief-list',
+    'variables' => array('briefs' => array()),
+  );
+  return $themes;
+}
+

@@ -1,0 +1,63 @@
+<?php
+function brief_schema() {
+  $schema = array();
+
+  $int_field = array(
+    'type' => 'int',
+    'unsigned' => TRUE
+  );
+
+  $serial = array(
+    'type' => 'serial',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+  );
+  
+  $schema['brief'] = array(
+    'fields' => array(
+      'bid' => $serial,
+      'finance' => $int_field,
+      'company' => $int_field,
+      'reviewer' => $int_field,
+    ),
+    'primary key' => array('bid'),
+    'foreign keys' => array(
+      'finance_key' => array(
+        'table' => 'finance',
+        'columns' => array('finance' => 'fid'),
+      ),
+      'company_key' => array(
+        'table' => 'company',
+        'columns' => array('company' => 'cid'),
+      ),
+    ),
+  );
+
+  $schema['finance'] = array(
+    'fields' => array(
+      'fid' => $serial,
+      'bank' => $int_field,
+      'loan' => $int_field,
+      'assets' => $int_field,
+      'funds' => $int_field,
+      'revenue' => $int_field,
+    ),
+    'primary key' => array('sid'),
+  );
+
+  $schema['company'] = array(
+    'fields' => array(
+      'cid' => $serial,
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'industry' => $int_field,
+      'foundation_date' => $int_field,
+    ),
+    'primary key' => array('cid'),
+  );
+
+  return $schema;
+}
