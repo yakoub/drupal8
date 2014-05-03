@@ -1,0 +1,29 @@
+titles:
+  staff: Company staff
+  departments: Company departments
+  assignment: Staf assignments
+#
+staff:
+  George:
+    age: 45
+    position: Manager
+    experience: 10
+  Micheal:
+    age: 33
+    position: Accountant
+    experience: 5
+  John:
+    age: 40
+    position: Technician
+    experience: 2
+#
+departments:
+  - Finance
+  - Human resources
+  - Technical A
+  - Technical B
+#
+assignment:
+  George: [Finance, Human resources]
+  Micheal: [Finance]
+  John: [Technical A]
