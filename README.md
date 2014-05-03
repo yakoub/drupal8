@@ -4,4 +4,4 @@ module mine is working and shows miniaml implementation of routing api, configur
 
 module brief is unfinished and it is about working with database and forms
 
-next objective is to implement a plugin type .
+next objective is to implement a plugin type then learn about entities and fields .
