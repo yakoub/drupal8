@@ -1,6 +1,6 @@
 drupal 8 learning
 
-module mine is working and shows miniaml implementation of routing api, configuration api and linkGenerator
+module mine is working and shows minimal implementation of routing api, configuration api and linkGenerator
 
 module brief is unfinished and it is about working with database and forms
 
