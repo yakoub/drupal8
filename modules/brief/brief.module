@@ -19,6 +19,13 @@ function brief_theme() {
     'template' => 'brief-list',
     'variables' => array('briefs' => array()),
   );
+  $themes['brief'] = array(
+    'template' => 'brief',
+    'variables' => array(
+      'company' => '',
+      'finance' => '',
+    ),
+  );
   return $themes;
 }
 

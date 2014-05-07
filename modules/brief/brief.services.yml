@@ -1,0 +1,5 @@
+services:
+  paramconverter.brief:
+    class: Drupal\brief\ParamConverter\BriefParamConverter
+    tags:
+      - { name: paramconverter }

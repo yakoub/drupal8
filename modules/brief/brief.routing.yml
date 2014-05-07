@@ -31,7 +31,7 @@ brief.edit:
   _requirements:
     _permission: 'brief edit'
 
-brief.delete
+brief.delete:
   path: 'brief/{brief}/delete'
   _defaults:
     _title_callback: '\Drupal\Brief\Controller\Brief\title'

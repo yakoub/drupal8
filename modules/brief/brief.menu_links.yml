@@ -1,0 +1,3 @@
+brief.entry:
+  title:  Briefs 
+  route_name: brief.main

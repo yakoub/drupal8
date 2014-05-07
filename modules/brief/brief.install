@@ -42,7 +42,7 @@ function brief_schema() {
       'funds' => $int_field,
       'revenue' => $int_field,
     ),
-    'primary key' => array('sid'),
+    'primary key' => array('fid'),
   );
 
   $schema['company'] = array(
