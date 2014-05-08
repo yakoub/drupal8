@@ -11,7 +11,7 @@ brief.add:
   _defaults:
     _title: 'Add brief'
     _form: '\Drupal\Brief\Forms\BriefAdd'
-  _requiremnts:
+  _requirements:
     _permission: 'brief create'
 
 brief.view:
@@ -19,7 +19,7 @@ brief.view:
   _defaults:
     _title_callback: '\Drupal\Brief\Controller\Brief::title'
     _content: '\Drupal\Brief\Controller\Brief::view'
-  _requirments:
+  _requirements:
     _permission: 'brief view'
 
 brief.edit:

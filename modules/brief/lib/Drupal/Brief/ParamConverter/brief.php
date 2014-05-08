@@ -1,3 +1,4 @@
+<?php
 namespace \Drupal\Brief\ParamConverter;
 
 use Drupal\Core\ParamConverter\ParamConverterInterface;

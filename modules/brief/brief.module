@@ -1,16 +1,16 @@
 <?php
 function brief_permission() {
   $permissions = array();
-  $permission['brief create'] = array(
+  $permissions['brief create'] = array(
     'title' => t('Create brief'),
   );
-  $permission['brief view'] = array(
+  $permissions['brief view'] = array(
     'title' => t('View brief'),
   );
-  $permission['brief edit'] = array(
+  $permissions['brief edit'] = array(
     'title' => t('Edit brief'),
   );
-  return $permission;
+  return $permissions;
 }
 
 function brief_theme() {
