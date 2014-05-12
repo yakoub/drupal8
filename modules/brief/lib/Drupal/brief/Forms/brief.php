@@ -1,7 +1,7 @@
 <?php
-namespace \Drupal\Brief\Forms;
+namespace Drupal\brief\Forms;
 
-use \Drupal\Brief\BriefInterface;
+use Drupal\brief\BriefInterface;
 
 class BriefAdd extends FormBase {
   public function getFormId() {

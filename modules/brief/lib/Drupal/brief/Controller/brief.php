@@ -1,6 +1,6 @@
 <?php
-namespace \Drupal\Brief\Controller;
-use \Drupal\Brief\BriefInterface;
+namespace Drupal\brief\Controller;
+use Drupal\brief\BriefInterface;
 
 class Brief {
 
