@@ -1,29 +1,12 @@
 <?php
-namespace \Drupal\Brief;
+namespace Drupal\brief;
 
 use Drupal\Core\ParamConverter\ParamConverterInterface;
 use Symfony\Component\Routing\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Drupal\brief\BriefInterface;
 
-function main() {
-  $briefs = Brief::range(0, 10);
-  $lg = \Drupal::linkGenerator();
-  return array(
-    '#theme' => 'brief_list',
-    '#briefs' => $briefs,
-    '#prefix' => $lg->generate(t('Add brief'), 'brief.add'),
-  );
-}
-
-
-class BriefInterface {
-  public function company();
-  public function finance();
-  public function create($values);
-  public function update($values);
-  public static function range($start, $length);
-}
-
-class Brief implements BriefIntreface {
+class Brief implements BriefInterface {
 
   public function __construct($id = NULL) {
     if (!$id) {
@@ -91,7 +74,7 @@ class Brief implements BriefIntreface {
     );
   }
 
-  public function save($values) {
+  public function update($values) {
     db_update('company')
       ->condition('cid', $this->$brief->company)
       ->fields(array('name' => $values['name']))
@@ -101,8 +84,8 @@ class Brief implements BriefIntreface {
   public static function range($start, $length) {
     $query = db_select('brief', 'b');
     $query->join('company', 'c', 'b.company = c.cid');
-    $query->fields('b', array('bid');
-    $query->fields('c', array('name');
+    $query->fields('b', array('bid'));
+    $query->fields('c', array('name'));
     $query->range($start, $length);
 
     return $query->execute()->fetchAll();

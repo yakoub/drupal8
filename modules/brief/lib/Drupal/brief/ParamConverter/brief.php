@@ -1,5 +1,5 @@
 <?php
-namespace \Drupal\Brief\ParamConverter;
+namespace Drupal\brief\ParamConverter;
 
 use Drupal\Core\ParamConverter\ParamConverterInterface;
 use Symfony\Component\Routing\Route;
