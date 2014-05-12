@@ -1,40 +1,40 @@
 brief.main:
   path: 'brief'
-  _defaults:
+  defaults:
     _title: 'Brief'
-    _content: '\Drupal\Brief\main'
-  _requirements:
+    _content: '\Drupal\brief\main'
+  requirements:
     _permission: 'access content'
 
 brief.add:
   path: 'brief/add'
-  _defaults:
+  defaults:
     _title: 'Add brief'
     _form: '\Drupal\Brief\Forms\BriefAdd'
-  _requirements:
+  requirements:
     _permission: 'brief create'
 
 brief.view:
   path: 'brief/{brief}'
-  _defaults:
+  defaults:
     _title_callback: '\Drupal\Brief\Controller\Brief::title'
     _content: '\Drupal\Brief\Controller\Brief::view'
-  _requirements:
+  requirements:
     _permission: 'brief view'
 
 brief.edit:
   path: 'brief/{brief}/edit'
-  _defaults:
+  defaults:
     _title_callback: '\Drupal\Brief\Controller\Brief\title'
     edit: Yes
     _form: '\Drupal\Brief\Forms\BriefEdit'
-  _requirements:
+  requirements:
     _permission: 'brief edit'
 
 brief.delete:
   path: 'brief/{brief}/delete'
-  _defaults:
+  defaults:
     _title_callback: '\Drupal\Brief\Controller\Brief\title'
     _form: 'Drupal\Brief\Forms\BriefDelete'
-  _requirements:
+  requirements:
     _permission: 'brief edit'
