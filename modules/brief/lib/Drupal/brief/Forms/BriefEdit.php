@@ -1,27 +1,9 @@
 <?php
+
 namespace Drupal\brief\Forms;
 
-use Drupal\brief\BriefInterface;
-
-class BriefAdd extends FormBase {
-  public function getFormId() {
-    return 'brief_add';
-  }
-
-  public function buildForm(array $form, array &$form_state) {
-    $form['name'] = array(
-      '#title' => 'Company name',
-      '#type' => 'textfield',
-    );
-
-    return $form;
-  }
-
-  public function submitForm(array &$form, array &$form_state) {
-    $brief = new Brief();
-    $brief->create($form_state['values']);
-  }
-}
+use Drupal\brief\Forms\Brief;
+use Drupal\brief\Forms\BriefInterface;
 
 class BriefEdit extends BriefAdd {
 

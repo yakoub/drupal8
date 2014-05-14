@@ -13,47 +13,47 @@ class Brief implements BriefInterface {
       return;
     }
     $query = db_select('brief', 'b');
-    $this->$brief = $query
+    $this->brief = $query
       ->condition('bid', $id)
       ->execute()
       ->fetchObject();
   }
  
   public function company() {
-    if ($this->$company) {
-      return $this->$company;
+    if ($this->company) {
+      return $this->company;
     }
     $query = db_select('company', 'c');
     $company = $query
-      ->condition('cid', $this->$brief->$company)
+      ->condition('cid', $this->brief->company)
       ->execute()
       ->fetchObject();
-    $this->$company = $company ? $company : array();
-    $this->$company += array(
+    $this->company = $company ? $company : array();
+    $this->company += array(
       'name' => '',
     );
-    $this->$company = (object) $this->$company;
-    return $this->$company;
+    $this->company = (object) $this->company;
+    return $this->company;
   }
   
   public function finance() {
-    if ($this->$finance) {
-      return $this->$finance;
+    if ($this->finance) {
+      return $this->finance;
     }
     $query = db_select('finance', 'c');
     $finance = $query
-      ->condition('fid', $this->$brief->$finance)
+      ->condition('fid', $this->brief->finance)
       ->execute()
       ->fetchAssoc();
       
-    $this->$finance = $finance ? $finance : array();
-    $this->$finance += array(
+    $this->finance = $finance ? $finance : array();
+    $this->finance += array(
       'bank' => '',
       'loan' => '',
       'assets' => '',
     );
-    $this->$finance = (object) $this->$finance;
-    return $this->$finance;
+    $this->finance = (object) $this->finance;
+    return $this->finance;
   }
  
   public function create($values) {
@@ -64,10 +64,10 @@ class Brief implements BriefInterface {
     
     $insert = db_insert('brief');
     $bid = $insert
-      ->fields(array('cid' => $cid))
+      ->fields(array('company' => $cid))
       ->execute();
 
-    $this->$brief = (object) array(
+    $this->brief = (object) array(
       'company' => $cid,
       'bid' => $bid,
       'finance' => NULL,
@@ -76,11 +76,17 @@ class Brief implements BriefInterface {
 
   public function update($values) {
     db_update('company')
-      ->condition('cid', $this->$brief->company)
+      ->condition('cid', $this->brief->company)
       ->fields(array('name' => $values['name']))
       ->execute();
   }
-  
+
+  public function delete() {
+    db_delete('company')
+      ->condition('cid', $this->brief->company)
+      ->execute();
+  }
+
   public static function range($start, $length) {
     $query = db_select('brief', 'b');
     $query->join('company', 'c', 'b.company = c.cid');

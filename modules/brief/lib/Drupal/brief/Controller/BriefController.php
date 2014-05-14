@@ -2,7 +2,7 @@
 namespace Drupal\brief\Controller;
 use Drupal\brief\BriefInterface;
 
-class Brief {
+class BriefController {
 
   public static function title(BriefInterface $brief) {
     return $brief->company()->$name;

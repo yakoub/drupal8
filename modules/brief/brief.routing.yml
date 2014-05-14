@@ -17,15 +17,15 @@ brief.add:
 brief.view:
   path: 'brief/{brief}'
   defaults:
-    _title_callback: '\Drupal\brief\Controller\Brief::title'
-    _content: '\Drupal\brief\Controller\Brief::view'
+    _title_callback: '\Drupal\brief\Controller\BriefController::title'
+    _content: '\Drupal\brief\Controller\BriefController::view'
   requirements:
     _permission: 'brief view'
 
 brief.edit:
   path: 'brief/{brief}/edit'
   defaults:
-    _title_callback: '\Drupal\brief\Controller\Brief\title'
+    _title_callback: '\Drupal\brief\Controller\BriefController\title'
     edit: Yes
     _form: '\Drupal\brief\Forms\BriefEdit'
   requirements:
@@ -34,7 +34,7 @@ brief.edit:
 brief.delete:
   path: 'brief/{brief}/delete'
   defaults:
-    _title_callback: '\Drupal\brief\Controller\Brief\title'
+    _title_callback: '\Drupal\brief\Controller\BriefController\title'
     _form: 'Drupal\brief\Forms\BriefDelete'
   requirements:
     _permission: 'brief edit'
