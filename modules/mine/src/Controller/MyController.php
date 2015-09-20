@@ -2,6 +2,7 @@
 namespace Drupal\mine\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Drupal\Core\Url;
 
 class MyController {
 
@@ -33,7 +34,7 @@ class MyController {
     return array(
       '#theme' => 'item_list',
       '#items' => $data,
-      '#prefix' => \Drupal::linkGenerator()->generate(t('Back'), 'mine.main'),
+      '#prefix' => \Drupal::linkGenerator()->generate(t('Back'), Url::fromRoute('mine.main')),
     );
   }
 }

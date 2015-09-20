@@ -1,14 +1,14 @@
 mine.main:
-  path: 'mine/main'
+  path: '/mine/main'
   defaults:
     _title: 'Welcome to mine'
-    _content: '\Drupal\mine\main'
+    _controller: '\Drupal\mine\Main::nav'
   requirements:
     _permission: 'access content'
 mine.data:
-  path: 'mine/data/{type}'
+  path: '/mine/data/{type}'
   defaults:
     _title_callback: '\Drupal\mine\Controller\MyController::typeTitle' 
-    _content: '\Drupal\mine\Controller\MyController::typeData'
+    _controller: '\Drupal\mine\Controller\MyController::typeData'
   requirements:
     _permission: 'access content'
