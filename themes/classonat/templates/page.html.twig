@@ -1,0 +1,30 @@
+<header role="banner">
+  <div class="inner">
+    {{ page.header }}
+  </div>
+</header>
+
+<main{{content_attributes.setAttribute('role', 'main')}}>
+  <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+  <div class="inner">
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar %}
+      <aside class="layout-sidebar" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+  </div>
+
+</main>
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    <div class="inner">
+      {{ page.footer }}
+    </div>
+  </footer>
+{% endif %}

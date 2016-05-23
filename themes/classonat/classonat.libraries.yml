@@ -1,0 +1,6 @@
+base:
+  css:
+    layout:
+      css/layout.css: {}
+    component:
+      css/components/menu.css: {}

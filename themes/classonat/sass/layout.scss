@@ -1,0 +1,35 @@
+header, main, footer {
+  width: 100%;
+}
+
+
+@media all and (min-width: 560px) and (max-width: 850px) {
+  .inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (min-width: 851px) {
+  .inner {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+main.with-sidebar {
+  .layout-content {
+    float: left;
+    width: 70%;
+  }
+  .layout-sidebar {
+    float: left;
+    width: 30%;
+  }
+
+  [dir="rtl"] {
+    .layout-content, .layout-sidebar {
+      float: right;
+    }
+  }
+}

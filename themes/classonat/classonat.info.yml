@@ -1,0 +1,21 @@
+name: classonat
+type: theme
+description: classy reasonat subtheme
+core: 8.x
+base theme: classy
+
+libraries:
+  - classonat/base
+
+#libraries-verride:
+#  classy/base:
+#    css:
+#      component:
+#        css/components/menu.css: false
+#        css/components/breadcrumb.css: false
+
+regions:
+  header: Header
+  content: 'Main content'
+  sidebar: Sidebar
+  footer: Footer

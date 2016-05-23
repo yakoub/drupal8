@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Core\Template\Attribute;
+
+function classonat_preprocess_page(&$variables) {
+  $content_attributes = new Attribute();
+  $content_attributes['class'] = array('main-content');
+  if (!empty($variables['page']['sidebar'])) {
+    $content_attributes['class'][] = 'with-sidebar';
+  }
+  $variables['content_attributes'] = $content_attributes;
+}
