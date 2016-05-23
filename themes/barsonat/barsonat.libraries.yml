@@ -1,0 +1,8 @@
+global-styling:
+  css:
+    base:
+      css/base/elements.css: {}
+    component:
+      css/components/block.css: {}
+    theme:
+      css/colors.css: {}

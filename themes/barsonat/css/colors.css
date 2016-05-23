@@ -1,0 +1,5 @@
+#header {
+  background-color: #8d68c3;
+  background-image: -webkit-linear-gradient(top, #055a8e 0%, #8d68c3 100%);
+  background-image: linear-gradient(to bottom, #055a8e 0%, #8d68c3 100%);
+}
