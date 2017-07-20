@@ -1,0 +1,3 @@
+administer webform emails:
+  title: 'Access Admin tab on a webform'
+  description: 'applies only if the webform has clal custom handler'

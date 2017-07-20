@@ -1,0 +1,4 @@
+webform_admin.admin:
+  route_name: webform_admin.admin
+  title: 'Admin'
+  base_route: entity.webform.canonical

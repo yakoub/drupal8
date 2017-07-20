@@ -1,0 +1,11 @@
+webform_admin.admin:
+  path: '/webform/{webform}/admin'
+  defaults:
+    _title: 'Admin'
+    _form: '\Drupal\webform_admin\Admin'
+  options:
+    parameters:
+      webform:
+        type: 'entity:webform'
+  requirements:
+    _custom_access: '\Drupal\webform_admin\Admin::access'
